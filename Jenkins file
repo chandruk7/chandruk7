@@ -1,0 +1,13 @@
+agent {
+        node {
+        label  "test-node"
+        }
+    }
+
+
+ stage('Cloning our Git') { 
+            steps { 
+                git credentialsId: '******', url: '*******'
+            }
+        } 
+        
