@@ -1,13 +1,29 @@
-agent {
-        node {
-        label  "test-node"
+pipeline {
+    
+    agent any 
+    
+    stage {
+        
+        stage("build"){
+             
+             step {
+                  echo "Build the application"
         }
     }
-
-
- stage('Cloning our Git') { 
-            steps { 
-                git credentialsId: '******', url: '*******'
-            }
-        } 
-        
+    
+    stage("testing"){
+             
+             step {
+                  echo "testing the application"
+        }
+    }
+    
+    stage("deploy"){
+             
+             step {
+                  echo "deploying the application"
+         }
+      }
+   
+   }
+ }   
